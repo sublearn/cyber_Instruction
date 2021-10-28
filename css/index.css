@@ -13,6 +13,7 @@ body {
 .header__top a {
   text-decoration: none;
   color: white;
+  transition: all.3s;
 }
 
 .header__right a {
@@ -28,6 +29,18 @@ body {
   border: 1px solid black;
 
   margin-left: 0.25rem;
+}
+
+.header__right a:hover {
+  color: #ff4f81 !important;
+  border-color: white;
+}
+
+/* vì color text thêm bằng BS class (trong HTML) nên phải dùng !important ở đây để override lại
+có thể check qua dev tools css cũ
+*/
+.header__left a:hover {
+  color: black !important;
 }
 
 /* NOTE NAVBAR */
@@ -93,5 +106,24 @@ body {
 }
 
 #navbarInstruction .nav-item:hover .nav-link {
+  color: #ff4f81;
+}
+
+/* NOTE dropdown */
+/* Inspect để biết class phải chọn là gì */
+#navbarInstruction .dropdown-menu {
+  background-color: rgba(0, 0, 0, 0.6);
+  border: 1px solid rgba(0, 0, 0, 0.6);
+}
+
+#navbarInstruction .dropdown-item {
+  color: white;
+  transition: all 0.3s;
+}
+/* copy selector trong dev tools, thêm ID để tăng độ ưu tiên */
+#navbarInstruction .dropdown-item:focus,
+#navbarInstruction .dropdown-item:hover {
+  /* ko cho hiện màu trắng khi hover vào */
+  background-color: transparent;
   color: #ff4f81;
 }
