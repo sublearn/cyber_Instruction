@@ -47,11 +47,20 @@
             </div>
         </div>
         <!-- https://getbootstrap.com/docs/5.1/components/navbar/ -->
-        <!-- navbar-light bg-light 2 class màu trong example, có thể ko dùng -->
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <!-- 
+            navbar-light bg-light 2 class màu trong example, có thể ko dùng
+            Nếu modified nên tạo tên class riêng
+         -->
+        <nav class="navbar navbar-expand-lg navInstruction container">
             <div class="container-fluid">
-                <a class="navbar-brand" href="#">
-                    <p><i class="fa fa-book"></i> INSTRUCTION</p>
+                <a class="navbar-brand text-center" href="#">
+                    <!-- 
+                        BS5 dùng fw thay vì font-weight BS4, 
+                        phải nhơ đúng tên class, ko modified qua css được 
+                        ở đây chỉ ví dụ lý thuyết
+                        Nếu modified chỉ 1 vị trí thì xài class BS cũng tạm
+                    -->
+                    <p class="fw-bold mb-0"><i class="fa fa-book"></i> INSTRUCTION</p>
                     <p>EDUCATION</p>
                 </a>
                 <!-- toggle responsive cho màn hình nhỏ -->
@@ -71,7 +80,8 @@
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarInstruction">
-                    <ul class="navbar-nav">
+                    <!-- Tận dụng margin left auto để đề ép sát div con menu về tay phải -->
+                    <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
                             <!-- aria-current  hỗ trợ accessibility , xóa OK-->
                             <a class="nav-link active" aria-current="page" href="#">HOME</a>
@@ -86,8 +96,8 @@
                             <a class="nav-link" href="#">GALLERY</a>
                         </li>
                         <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInstructionMenu" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
+                            <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownInstructionMenu"
+                                role="button" data-bs-toggle="dropdown" aria-expanded="false">
                                 PAGES
                             </a>
                             <ul class="dropdown-menu" aria-labelledby="navbarDropdownInstructionMenu">
