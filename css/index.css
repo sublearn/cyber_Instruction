@@ -1,3 +1,9 @@
+/* NOTE GLOBAL */
 html,body{
     font-family: 'Work Sans', sans-serif;;
+}
+
+/* NOTE HEADER */
+.header__top{
+    background-color: #ff4f81;
 }
