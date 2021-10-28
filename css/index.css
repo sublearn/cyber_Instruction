@@ -6,4 +6,25 @@ html,body{
 /* NOTE HEADER */
 .header__top{
     background-color: #ff4f81;
+    font-size: 14px;
+}
+
+.header__top a{
+    text-decoration: none;
+    color: white;
+}
+
+.header__right a{
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+
+    background-color: black;
+
+    text-align: center;
+    line-height: 30px;
+
+    border: 1px solid black;
+
+    margin-left: 0.25rem;
 }
