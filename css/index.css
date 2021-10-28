@@ -50,3 +50,48 @@ body {
   letter-spacing: 3px;
   font-weight: bold;
 }
+
+/* NOTE nav menu right */
+/* Chỉ khi cần override mạnh mới phải dùng selector dài */
+
+#navbarInstruction .nav-item {
+  margin: 0 15px;
+}
+
+/* Xử lí đường gạch chân */
+#navbarInstruction .nav-item::after {
+  content: "";
+  display: block;
+  width: 0;
+  height: 2px;
+
+  background-color: #ff4f81;
+
+  transition: all 0.2s;
+}
+
+#navbarInstruction .nav-item:hover::after {
+  width: 100%;
+}
+
+/* Luôn hiện ga5jch chân và đổi màu ở class active */
+/* code này ở phía dưới nên sẽ đè lại default ở trên */
+#navbarInstruction .nav-item.active .nav-link {
+  color: #ff4f81;
+}
+
+#navbarInstruction .nav-item.active::after {
+  width: 100%;
+}
+
+#navbarInstruction .nav-link {
+  font-size: 14px;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  transition: all 0.3s;
+}
+
+#navbarInstruction .nav-item:hover .nav-link {
+  color: #ff4f81;
+}
