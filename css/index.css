@@ -35,9 +35,15 @@ body {
   margin: 20px auto;
 }
 
+/* 
+Phần carousel ko có padding nên đè lại bằng css paddign 0 ở dưới hoặc class BS py-0
+padding thẳng vào tag thì khỏi thêm class section vào
+Thiết kế thường để padding khoảng 70-80px
+*/
 section {
   padding: 5rem 0;
 }
+
 /* NOTE HEADER */
 .header__top {
   background-color: #ff4f81;
@@ -207,7 +213,9 @@ fix nhẹ top lên 55% cho giống layout mẫu
 
 /* NOTE WELCOME */
 /* đơn vị em đi theo font size gần nhất */
-.welcome__content p {
+/* Fix lại > direct child selector  - mục 6 */
+/* https://www.csssolid.com/35-css-selectors-to-remember.html */
+.welcome__content > p {
   width: 80%;
 
   margin: 0 auto;
@@ -220,4 +228,37 @@ fix nhẹ top lên 55% cho giống layout mẫu
   /* 1 em hiện tại = 15px */
 
   color: #999;
+}
+
+.welcome__item i {
+  font-size: 2rem;
+}
+
+.welcome__item h3 {
+  color: #ff4f81;
+  font-weight: bold;
+  font-size: 1.8rem;
+
+  margin: 1rem 0;
+}
+
+.welcome__item h4 {
+  color: black;
+  font-weight: bold;
+  font-size: 1rem;
+
+  margin: 1rem 0 0.2rem;
+}
+
+.welcome__item p {
+  color: #999;
+  font-size: 15px;
+  line-height: 1.8rem;
+  letter-spacing: 1px;
+
+  margin: 10px 0 0;
+}
+
+.welcome__course .row > div{
+  padding: 2rem;
 }
