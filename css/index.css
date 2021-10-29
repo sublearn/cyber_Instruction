@@ -4,6 +4,40 @@ body {
   font-family: "Work Sans", sans-serif;
 }
 
+/* NOTE HEADING - dùng chung*/
+
+.heading {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.heading h2 {
+  color: #ff4f81;
+  font-size: 40px;
+  letter-spacing: 0.5px;
+  font-weight: bold;
+}
+
+.heading p {
+  text-transform: capitalize;
+  letter-spacing: 4px;
+  font-size: 17px;
+  color: black;
+}
+
+.heading p::after {
+  content: "";
+  display: block;
+  width: 70px;
+  height: 2px;
+
+  background-color: black;
+  margin: 20px auto;
+}
+
+section {
+  padding: 5rem 0;
+}
 /* NOTE HEADER */
 .header__top {
   background-color: #ff4f81;
@@ -169,4 +203,21 @@ fix nhẹ top lên 55% cho giống layout mẫu
 
 #carouselCyber .carousel-caption button:hover {
   background-color: #ff4f81;
+}
+
+/* NOTE WELCOME */
+/* đơn vị em đi theo font size gần nhất */
+.welcome__content p {
+  width: 80%;
+
+  margin: 0 auto;
+  padding: 1rem 0 5rem;
+
+  text-align: center;
+  font-size: 15px;
+  letter-spacing: 1px;
+  line-height: 1.8em;
+  /* 1 em hiện tại = 15px */
+
+  color: #999;
 }
