@@ -433,7 +433,7 @@
                 </div>
                 <div class="col-7">
                     <h3>
-                        <a href="#" data-bs-toggle="modal" data-bs-target="#exampleModal">SIT AMET JUSTO VITAE</a>
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#cyberModal">SIT AMET JUSTO VITAE</a>
                     </h3>
                     <h4>03/01/2021</h4>
                     <p>Proin euismod vehicula vestibulum. Fusce ullamcorper aliquet dolor id egestas. Nulla leo purus,
@@ -446,9 +446,10 @@
 
                 <div class="col-7">
                     <h3>
-                        <a href="#">FUSCE SCELERISQUE</a>
+                        <!-- Vi xài chung popup nên xài chung id được, nếu ko phải copy hêm 1 modal với nội dung mới và id riêng-->
+                        <a href="#" data-bs-toggle="modal" data-bs-target="#cyberModal">FUSCE SCELERISQUE</a>
                     </h3>
-                    <h4>03/01/2021</h4>
+                    <h4>02/02/2022</h4>
                     <p>Proin euismod vehicula vestibulum. Fusce ullamcorper aliquet dolor id egestas. Nulla leo purus,
                         facilisis non cursus ut, egestas sed ipsum.Fusce ullamcorper aliquet dolor id egestas. Nulla leo
                         purus, facilisis non cursus ut, egestas sed ipsum.Fusce ullamcorper aliquet dolor id egestas.
@@ -473,22 +474,29 @@
         Cần dùng pos abs hoặc fixed
         Nếu để phía section mà lỡ có pos relative thì sẽ ko phủ hết web mà chỉ phủ trong phần các pos trong section
      -->
-    <!-- Button trigger modal -->
-
-    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <!--
+         class fade giúp mở modal có animation transition mờ
+      -->
+    <div class="modal fade" id="cyberModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+                    <h5 class="modal-title" id="exampleModalLabel">INSTRUCTION</h5>
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    ...
+                    <img class="img-fluid" src="./img/g12.jpg" alt="modal img">
+                    <p>Duis venenatis, turpis eu bibendum porttitor, sapien quam ultricies tellus, ac rhoncus risus odio
+                        eget nunc. Pellentesque ac fermentum diam. Integer eu facilisis nunc, a iaculis felis.
+                        Pellentesque pellentesque tempor enim, in dapibus turpis porttitor quis. Suspendisse ultrices
+                        hendrerit massa. Nam id metus id tellus ultrices ullamcorper. Cras tempor massa luctus, varius
+                        lacus sit amet, blandit lorem. Duis auctor in tortor sed tristique. Proin sed finibus sem</p>
                 </div>
-                <div class="modal-footer">
+                <!-- layout hiện tại modal ko cần footer -->
+                <!-- <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
                     <button type="button" class="btn btn-primary">Save changes</button>
-                </div>
+                </div> -->
             </div>
         </div>
     </div>
