@@ -34,8 +34,9 @@
                 <!-- https://getbootstrap.com/docs/5.1/utilities/background/ -->
                 <!-- https://getbootstrap.com/docs/5.1/utilities/spacing/ -->
                 <!-- BS5 dùng me thay cho mr -->
-                <a href="tel:0961051014" class="text-white me-4"><i class="fas fa-phone-alt">096.105.1014</i></a>
-                <a href="mailto:info@holamigo" class="text-white"><i class="far fa-envelope"></i>info@holamigo</a>
+                <a href="tel:0961051014" class="text-white me-4"><i class="fas fa-phone-alt"></i> 096.105.1014</a>
+                <a href="mailto:info@cybersoft.edu.vn" class="text-white"><i class="far fa-envelope"></i>
+                    info@cybersoft.edu.vn</a>
             </div>
             <!-- https://getbootstrap.com/docs/5.1/utilities/borders/ -->
             <!-- https://getbootstrap.com/docs/5.1/utilities/text/ -->
@@ -43,7 +44,7 @@
                 <a href="#"><i class="fab fa-facebook-f"></i></a>
                 <a href="#"><i class="fab fa-twitter"></i></a>
                 <a href="#"><i class="fab fa-pinterest-p"></i></a>
-                <a href="#"><i class="fab fa-linkedin"></i></a>
+                <a href="#"><i class="fab fa-linkedin-in"></i></a>
             </div>
         </div>
         <!-- https://getbootstrap.com/docs/5.1/components/navbar/ -->
@@ -61,7 +62,10 @@
                         Nếu modified chỉ 1 vị trí thì xài class BS cũng tạm
                     -->
                     <p class="fw-bold mb-0"><i class="fa fa-book"></i> INSTRUCTION</p>
-                    <p>EDUCATION</p>
+                    <!-- check dev thì mbt 1 rem của reboot.scss do BS tự thêm, đè class lại
+                    Xài thư viện phải check dev tool để chọn cách đè css thích hợp
+                    -->
+                    <p class="mb-0">EDUCATION</p>
                 </a>
                 <!-- toggle responsive cho màn hình nhỏ -->
                 <!-- 
@@ -117,7 +121,13 @@
     <section class="cyberCarousel">
         <!-- BS có 1 class carousel riêng nên tên class của section phải đặt khác -->
         <!-- Đổi id mặc định và các html attribute liên quan -->
-        <div id="carouselCyber" class="carousel slide" data-bs-ride="carousel">
+
+        <!-- 
+            Tạm bỏ thuộc tính data-ride auto chạy của carousel đi 
+            Chỉnh 1 phần trước xem coi ôn chưa turo71c khi áp dụng toàn bộ
+        -->
+        <!-- <div id="carouselCyber" class="carousel slide" data-bs-ride="carousel"> -->
+        <div id="carouselCyber" class="carousel slide">
             <!-- indicator là các đường gạch chuyển hình -->
             <div class="carousel-indicators">
                 <button type="button" data-bs-target="#carouselCyber" data-bs-slide-to="0" class="active"
@@ -132,9 +142,9 @@
                 <!-- class active sẽ là hình hiện đầu tiên -->
                 <div class="carousel-item active">
                     <img src="./img/banner1.jpg" class="d-block w-100" alt="banner 1">
-                    <div class="carousel-caption d-none d-md-block">
+                    <div class="container carousel-caption d-none d-md-block">
                         <h1>Graphic Work Designing</h1>
-                        <p>Any succesful carrer starts with good education. Together with us you will have deeper
+                        <p>Any successful career starts with good education. Together with us you will have deeper
                             knowledge of the subjects</p>
                         <button class="btn">Read More <i class="fa fa-angle-double-right"
                                 aria-hidden="true"></i></button>
@@ -144,7 +154,7 @@
                     <img src="./img/banner2.jpg" class="d-block w-100" alt="banner 2">
                     <div class="carousel-caption d-none d-md-block">
                         <h1>Financial Analyst Course.</h1>
-                        <p>Any succesful carrer starts with good education. Together with us you will have deeper
+                        <p>Any successful career starts with good education. Together with us you will have deeper
                             knowledge of the subjects</p>
                         <button class="btn">Read More <i class="fa fa-angle-double-right"
                                 aria-hidden="true"></i></button>
@@ -154,7 +164,7 @@
                     <img src="./img/banner3.jpg" class="d-block w-100" alt="banner 3">
                     <div class="carousel-caption d-none d-md-block">
                         <h1>Digital Marketing Course.</h1>
-                        <p>Any succesful carrer starts with good education. Together with us you will have deeper
+                        <p>Any successful career starts with good education. Together with us you will have deeper
                             knowledge of the subjects</p>
                         <button class="btn">Read More <i class="fa fa-angle-double-right"
                                 aria-hidden="true"></i></button>

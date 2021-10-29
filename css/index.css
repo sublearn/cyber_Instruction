@@ -127,3 +127,46 @@ có thể check qua dev tools css cũ
   background-color: transparent;
   color: #ff4f81;
 }
+
+/* NOTE CAROUSEL */
+/* Kỹ thuật riêng canh center chỉ dùng khi với pos absolute 
+fix nhẹ top lên 55% cho giống layout mẫu
+*/
+#carouselCyber .carousel-caption {
+  top: 55%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+#carouselCyber .carousel-caption h1 {
+  font-size: 52px;
+}
+
+/* p ko là thẻ con bên trong pos absolute nên vẫn có thể dùng margin auto được */
+#carouselCyber .carousel-caption p {
+  letter-spacing: 4px;
+  line-height: 1.8rem;
+  font-weight: 300;
+
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 25px;
+}
+
+#carouselCyber .carousel-caption button {
+  padding: 11px 20px;
+
+  color: white;
+  font-size: 14px;
+  letter-spacing: 2px;
+
+  border: white 1px solid;
+  border-radius: 0;
+
+  transition: all 0.3s;
+}
+
+#carouselCyber .carousel-caption button:hover {
+  background-color: #ff4f81;
+}
