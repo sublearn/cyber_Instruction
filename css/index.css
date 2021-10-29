@@ -439,3 +439,46 @@ Tuy nhiên set css thì hiện trong dev tool có thể test thêm
 .feedback__content .owl-theme .owl-dots .owl-dot:focus {
   outline: none;
 }
+
+/* NOTE NEWS */
+.news__content img {
+  border: 2px solid #dedede;
+}
+
+.news__content h3 {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.news__content a {
+  text-decoration: none;
+  color: black;
+  letter-spacing: 1px;
+
+  transition: all 0.3s;
+}
+
+.news__content a:hover {
+  color: #ff4f81;
+}
+
+.news__content h4 {
+  font-size: 1rem;
+  color: #ff4f81;
+  font-weight: bold;
+  letter-spacing: 1px;
+
+  margin: 1rem 0;
+}
+
+.news__content p {
+  color: #999;
+  line-height: 1.8rem;
+  font-size: 0.9rem;
+
+  margin-top: 1rem;
+}
+
+.news__content .row:last-child {
+  margin-top: 5rem;
+}
