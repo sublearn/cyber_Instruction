@@ -364,6 +364,25 @@ fix nhẹ top lên 55% cho giống layout mẫu
   padding: 1rem 1.5rem;
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.47);
+
+  position: relative;
+}
+
+/* 
+Khi 1 thẻ chỉ có border, ko có width, height, content rỗng
+Kích thước thẻ khi đó sẽ phụ thuộc kích thước border
+Sau đó dùng position relative di chuyển
+*/
+.feedback__top::after {
+  content: "";
+
+  border-top: 9px solid rgba(0, 0, 0, 0.47);
+  border-left: 9px solid transparent;
+  border-right: 9px solid transparent;
+
+  position: absolute;
+  top: 100%;
+  left: 28%;
 }
 
 /* 
@@ -397,4 +416,26 @@ img check dev tool sẽ thấy đang bị thư viện BS css
   color: white;
   font-weight: bold;
   font-size: 1.1rem;
+}
+
+/* NOTE owl carousel dot */
+/* Check qua dev tool để chọn cách đè thích hợp
+  Gọi thêm từ class cha ngoài vào để giới hạn phạm vi, ko đè vô chính thứ viện và tăng độ ưu tiên
+ */
+.feedback__content .owl-theme .owl-dots .owl-dot span {
+  background-color: #ff4f81;
+  opacity: 0.5;
+}
+
+.feedback__content .owl-theme .owl-dots .owl-dot.active span,
+.feedback__content .owl-theme .owl-dots .owl-dot:hover span {
+  opacity: 1;
+}
+
+/* Đoạn này ko cần vì bản owl Carousel đã non sẵn 
+Tuy nhiên set css thì hiện trong dev tool có thể test thêm
+*/
+
+.feedback__content .owl-theme .owl-dots .owl-dot:focus {
+  outline: none;
 }
