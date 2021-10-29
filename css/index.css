@@ -325,7 +325,7 @@ fix nhẹ top lên 55% cho giống layout mẫu
 .offer__item h3 {
   font-size: 20px;
   color: black;
-  
+
   margin: 25px 0;
 }
 
@@ -333,4 +333,35 @@ fix nhẹ top lên 55% cho giống layout mẫu
   color: #6b6b6b;
   font-size: 14px;
   letter-spacing: 0.5px;
+}
+
+/* NOTE FEEDBACK */
+
+/* bg size-cover rồi thì sẽ ko repeat nữa */
+/* cách viết shorthand cho background */
+.feedback {
+  /* background-image: url(../img/banner3.jpg);
+  background-position: center; */
+  /* background: url(../img/banner3.jpg) center no-repeat; */
+  background: url(../img/banner3.jpg) center;
+
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.feedback__content {
+  box-shadow: 0px 1px 7px #8e8e8e;
+  background-color: rgba(0, 0, 0, 0.47);
+  padding: 1rem;
+}
+
+.feedback__content .item {
+  color: white;
+  padding: 1rem;
+}
+
+.feedback__top {
+  padding: 1rem 1.5rem;
+  border-radius: 5px;
+  background-color: rgba(0, 0, 0, 0.47);
 }
