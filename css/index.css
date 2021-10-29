@@ -365,3 +365,36 @@ fix nhẹ top lên 55% cho giống layout mẫu
   border-radius: 5px;
   background-color: rgba(0, 0, 0, 0.47);
 }
+
+/* 
+img check dev tool sẽ thấy đang bị thư viện BS css
+.owl-carousel .owl-item img 
+*/
+.feedback__content .feedback__bottom img {
+  width: 28%;
+  display: inline-block;
+}
+
+.feedback__bottom {
+  display: flex;
+  justify-content: center;
+  width: 55%;
+  margin: 2rem auto 0;
+}
+
+.feedback__name {
+  margin-left: 5px;
+}
+
+/* thẻ p trong name có margin từ BS nên phải đè lại để hình bình thường */
+
+.feedback__name p {
+  margin: 0;
+  color: #ff4f81;
+}
+
+.feedback__name p:first-child {
+  color: white;
+  font-weight: bold;
+  font-size: 1.1rem;
+}
