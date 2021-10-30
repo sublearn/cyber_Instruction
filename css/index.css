@@ -511,6 +511,9 @@ Tuy nhiên set css thì hiện trong dev tool có thể test thêm
 
 footer {
   background-color: #141415;
+}
+
+.footer__top {
   padding: 5rem 0;
 }
 
@@ -550,10 +553,17 @@ footer {
   line-height: 1.5rem;
   letter-spacing: 1px;
   font-size: 15px;
+
+  transition: all 0.3s;
 }
 
+.footer__link a:hover,
+.footer__contact a:hover {
+  color: white;
+}
+
+/* Font Awesome đã css sẵn là inline-block */
 .footer__contact i {
-  display: inline-block;
   width: 32px;
   height: 32px;
 
@@ -564,4 +574,68 @@ footer {
   border: 1px solid #4b4b50;
 
   margin-right: 1rem;
+}
+
+.footer__form {
+  margin-top: 3rem;
+}
+
+.footer__form label {
+  color: #ff4f81;
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 1px;
+}
+
+.footer__form input {
+  padding: 14px;
+
+  border-radius: 0;
+  border: none;
+
+  letter-spacing: 1px;
+  color: #888;
+
+  height: auto;
+}
+
+.footer__form button {
+  padding: 12px 35px;
+
+  background-color: #ff4f81;
+  color: white;
+
+  letter-spacing: 1px;
+  text-align: center;
+
+  border-radius: 0;
+  outline: none;
+
+  transition: all 0.3s;
+}
+
+.footer__form button:hover {
+  background-color: #ec1955;
+  color: white;
+}
+
+.footer__bottom {
+  background-color: #0f0f10;
+  color: white;
+
+  text-align: center;
+  letter-spacing: 1px;
+
+  padding: 1rem 0;
+}
+
+.footer__bottom a {
+  text-decoration: none;
+  color: #ff4f81;
+
+  transition: all 0.3s;
+}
+
+.footer__bottom a:hover {
+  color: white;
 }
