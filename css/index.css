@@ -639,3 +639,69 @@ footer {
 .footer__bottom a:hover {
   color: white;
 }
+
+/* NOTE responsive =====*/
+
+/* 
+Việc test responsive bằng dev tool chỉ chính xác 1 phần
+Chuẩn nhất vẫn là dùng đúng thiết bị để test vì có thể các chức năng touch, finger sẽ sai hoặc js chạy sai
+ví dụ hiệu ứng chuyển động của slide carousel
+hoặc mua acc trên các trang chuyên test
+https://www.browserstack.com/
+Mô phỏng trên tât cả các hệ điều hành win, mac, linux, các phiên bản luôn hệ điều hành
+Các bản android khác nhau, các phiên bản trình duyệt trên các thiết bị khác nhau
+
+Có thể thêm dưới header hoặc dưới cuối của file
+
+Bản thân BS dùng min width
+Nên nếu code thuần kết hợp BS respon thì phải chú ýko được lấy bằng giá trị breakpoint của BS
+Nếu màn hình kích thước đúng bằng vị trí breakpoint thì sẽ sinh ra lỗi vì ko biết nên lấy theo BS hay theo code css
+
+Tham khỏa trên docs thì lấy giá trị breakpoint - 0.02
+  576 - 575.98
+  768 -767.98
+  992 - 991.98
+  1200 - 1199.98
+  1400 - 1399.98
+
+Khi test trên các thiết bị chú ý xoay ngang xoay dọc
+Test bằng dev tool đôi khi phải tắt mở mô phỏng thiết bị lại để reload
+*/
+
+/* 
+
+https://getbootstrap.com/docs/5.1/layout/breakpoints/
+https://getbootstrap.com/docs/5.1/layout/containers/
+https://getbootstrap.com/docs/5.1/layout/grid/
+---
+https://getbootstrap.com/docs/4.6/layout/overview/#containers
+https://getbootstrap.com/docs/4.6/layout/grid/
+
+*/
+
+/* NOTE res_Header */
+/* TODO check vấn đề form phần footer màn nhỏ bị đẩy ra khỏi container, lỗi responsive */
+
+@media screen and (max-width: 575.98px) {
+  .header__left a {
+    display: block;
+  }
+}
+
+/* 
+iPhone 4/5 có thể tính là trường hợp đặc biệt
+Đối với apple watch thì chuyển sang app tool chứ ít khi quan tâm
+Max win màn lớn trước nhỏ sau
+320 ko có trong default của BS nên có thể lấy đúng
+*/
+
+@media screen and (max-width: 320px) {
+  .header__right {
+    width: 35%;
+    text-align: center;
+  }
+
+  .header__right a{
+    margin-top: 5px;
+  }
+}
