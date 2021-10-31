@@ -232,6 +232,13 @@ Line height các vùng respon nên để theo font-size - em chứ ko set cứng
   background-color: #ff4f81;
 }
 
+#carouselCyber .carousel-control-next,
+.carousel-control-next,
+#carouselCyber .carousel-control-next,
+.carousel-control-prev {
+  z-index: 11;
+}
+
 /* NOTE WELCOME */
 /* đơn vị em đi theo font size gần nhất */
 /* Fix lại > direct child selector  - mục 6 */
@@ -686,6 +693,15 @@ Test bằng dev tool đôi khi phải tắt mở mô phỏng thiết bị lại 
 */
 
 /* 
+Show device frame - hiện khung màn hình
+Test hết các loại thiết bị, đặc biệt các dòng iphone,
+Note lại các lỗi phát hiện
+Chú ý có thể do lỗi giả lập, phải reload mở đi lại nhiều
+Có thiết bị thật hoặc tool test tự động sẽ ổn hơn
+
+*/
+
+/* 
 
 https://getbootstrap.com/docs/5.1/layout/breakpoints/
 https://getbootstrap.com/docs/5.1/layout/containers/
@@ -728,6 +744,7 @@ Các class của BS hay đi kèm !important trong css - đoán ngược trong ht
     font-size: 1.6vw;
     margin-bottom: 0.5em;
   }
+
   /* Kích thước chữ button nên resp theo chữ trong vùng đó */
   #carouselCyber .carousel-caption button {
     font-size: 1.5vw;
@@ -739,6 +756,7 @@ Các class của BS hay đi kèm !important trong css - đoán ngược trong ht
   .navInstruction .navbar-brand p:first-child {
     font-size: 3vw;
   }
+
   .navInstruction .navbar-brand p:last-child {
     font-size: 1.5vw;
   }
@@ -747,6 +765,25 @@ Các class của BS hay đi kèm !important trong css - đoán ngược trong ht
 @media screen and (max-width: 575.98px) {
   .header__left a {
     display: block;
+  }
+}
+
+/* Check các thiết bị thì phát hiện lỗi ở vùng 414px
+Tuy nhiên số gợi ý trong devtool có thể sai lệch, offset nhỏ
+- BS ko có nên dùng đúng số */
+@media screen and (max-width: 415px) {
+  #carouselCyber {
+    height: 250px;
+  }
+
+  #carouselCyber .carousel-inner,
+  #carouselCyber .carousel-item,
+  #carouselCyber .carousel-item img {
+    height: 100%;
+  }
+  /* Tác dụng tương tự background cover nhưng đây là cho img */
+  #carouselCyber .carousel-item img {
+    object-fit: cover;
   }
 }
 
@@ -793,6 +830,7 @@ Max win màn lớn trước nhỏ sau
     margin: 0;
     padding: 0 2px;
   }
+
   #navbarInstruction .nav-link {
     font-size: 12px;
     padding: 5px;
