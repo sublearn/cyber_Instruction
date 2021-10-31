@@ -205,8 +205,18 @@
                 voluptate velit esse cillum dolore eu fugiat nulla pariatur sunt in culpa qui .
             </p>
             <div class="welcome__course container">
-                <div class="row">
-                    <div class="col-4 border border-dark">
+                <!-- BS row thường tự add mx -15px, 
+                    tự css đè được hoặc dùng class bs mx-0 reset
+                    Hoặc nếu ko muốn reset thì phải chuyển class border vô div welcome__item ở trong và dùng padding đẩy nội dung xích vô ??
+                -->
+                <div class="row mx-0">
+                    <!-- 
+                        col-12 col-sm-12 col-md-4 col-lg-4 col-xl-4
+                        shorthand
+                        giữ lại kích thước nhỏ nhất
+                         col-12 col-md-4
+                    -->
+                    <div class="col-12 col-md-4 mb-4 mb-md-0 border border-dark">
                         <div class="welcome__item">
                             <i class="fa fa-desktop"></i>
                             <h3>Design Course</h3>
@@ -218,7 +228,7 @@
                             <p>Ncididunt ut labore et t enim ad minim.</p>
                         </div>
                     </div>
-                    <div class="col-4 border border-dark">
+                    <div class="col-12 col-md-4  mb-4 mb-md-0 border border-dark">
                         <div class="welcome__item">
                             <i class="fa fa-arrows-alt"></i>
                             <h3>Marketing Course</h3>
@@ -230,7 +240,8 @@
                             <p>Ncididunt ut labore et t enim ad minim.</p>
                         </div>
                     </div>
-                    <div class="col-4 border border-dark">
+                    <!-- div cuối ko cần margin bottom mb đẩy nữa -->
+                    <div class="col-12 col-md-4 border border-dark">
                         <div class="welcome__item">
                             <i class="fas fa-chart-bar    "></i>
                             <h3>Financial Course</h3>
