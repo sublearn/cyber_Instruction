@@ -580,7 +580,7 @@ footer {
   color: #8b8b96;
   text-decoration: none;
 
-  line-height: 1.5rem;
+  line-height: 1.5em;
   letter-spacing: 1px;
   font-size: 15px;
 
@@ -598,7 +598,7 @@ footer {
   height: 32px;
 
   text-align: center;
-  line-height: 30px;
+  line-height: 32px;
   color: white;
 
   border: 1px solid #4b4b50;
@@ -771,6 +771,27 @@ Các class của BS hay đi kèm !important trong css - đoán ngược trong ht
   }
 }
 
+
+@media screen and (max-width: 767.98px) {
+  /* HEADER */
+  #navbarInstruction .navbar-nav {
+    background-color: #eee;
+    text-align: center;
+  }
+
+  #navbarInstruction .dropdown-menu {
+    background-color: #e0e1e2;
+    border-color: #e0e1e2;
+    text-align: center;
+    /* Color ở đâu ko đủ đè độ ưu tiên ở trên */
+    /* color: black; */
+  }
+
+  #navbarInstruction .dropdown-item {
+    color: black;
+  }
+}
+
 @media screen and (max-width: 575.98px) {
   /* GLOBAL - thẻ p toàn bộ web */
   .heading p {
@@ -811,26 +832,6 @@ Tuy nhiên số gợi ý trong devtool có thể sai lệch, offset nhỏ
   }
 }
 
-@media screen and (max-width: 767.98px) {
-  /* HEADER */
-  #navbarInstruction .navbar-nav {
-    background-color: #eee;
-    text-align: center;
-  }
-
-  #navbarInstruction .dropdown-menu {
-    background-color: #e0e1e2;
-    border-color: #e0e1e2;
-    text-align: center;
-    /* Color ở đâu ko đủ đè độ ưu tiên ở trên */
-    /* color: black; */
-  }
-
-  #navbarInstruction .dropdown-item {
-    color: black;
-  }
-}
-
 @media screen and (max-width: 376px) {
   /* FEEDBACK */
   .feedback__bottom {
@@ -853,7 +854,7 @@ Max win màn lớn trước nhỏ sau
   }
 
   .header__right a {
-    margin-top: 5px;
+  	margin-bottom: 5px;
   }
 }
 
