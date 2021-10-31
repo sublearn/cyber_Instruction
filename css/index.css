@@ -770,6 +770,12 @@ Các class của BS hay đi kèm !important trong css - đoán ngược trong ht
 }
 
 @media screen and (max-width: 575.98px) {
+  /* GLOBAL - thẻ p toàn bộ web */
+  .heading p{
+    padding: 0 15px;
+  }
+  
+  /* HEADER */
   .header__left a {
     display: block;
   }

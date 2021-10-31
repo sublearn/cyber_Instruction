@@ -447,10 +447,16 @@
             img-fluid
             -->
             <div class="row">
-                <div class="col-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <img class="img-fluid" src="./img/g7.jpg" alt="news img 1">
                 </div>
-                <div class="col-7">
+                <!-- 
+                    if min-width:768px (width >= 768 px ) => margin top = 0 
+                    else (width < 768 px) :
+                    margin top = 1 rem
+                    Khi bắt đầu chia 2 thì ko set margin top nữa 
+                -->
+                <div class="col-12 col-md-6 col-lg-7 mt-3 mt-md-0">
                     <h3>
                         <a href="#" data-bs-toggle="modal" data-bs-target="#cyberModal">SIT AMET JUSTO VITAE</a>
                     </h3>
@@ -462,8 +468,8 @@
                 </div>
             </div>
             <div class="row">
-
-                <div class="col-7">
+                <!-- Phần này do chữ đã có sẵn margin bottom - doBS sinh ra nên ko cần thêm -->
+                <div class="col-12 col-md-6 col-lg-7">
                     <h3>
                         <!-- Vi xài chung popup nên xài chung id được, nếu ko phải copy hêm 1 modal với nội dung mới và id riêng-->
                         <a href="#" data-bs-toggle="modal" data-bs-target="#cyberModal">FUSCE SCELERISQUE</a>
@@ -474,7 +480,7 @@
                         purus, facilisis non cursus ut, egestas sed ipsum.Fusce ullamcorper aliquet dolor id egestas.
                         Nulla leo purus, facilisis non cursus ut, egestas sed ipsum.</p>
                 </div>
-                <div class="col-5">
+                <div class="col-12 col-md-6 col-lg-5">
                     <img class="img-fluid" src="./img/g10.jpg" alt="news img 2">
                 </div>
             </div>
