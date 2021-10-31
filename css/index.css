@@ -202,10 +202,12 @@ fix nhẹ top lên 55% cho giống layout mẫu
   font-size: 52px;
 }
 
-/* p ko là thẻ con bên trong pos absolute nên vẫn có thể dùng margin auto được */
+/* p ko là thẻ con bên trong pos absolute nên vẫn có thể dùng margin auto được 
+Line height các vùng respon nên để theo font-size - em chứ ko set cứng là rem theo root
+*/
 #carouselCyber .carousel-caption p {
   letter-spacing: 4px;
-  line-height: 1.8rem;
+  line-height: 1.8em;
   font-weight: 300;
 
   width: 70%;
@@ -708,6 +710,31 @@ canh phần tử khi biết chiều cao
 /* https://getbootstrap.com/docs/5.1/layout/breakpoints/#max-width 
 nên inspet lên lấy bộ selector để override
 */
+
+/* Đè code responsive qua selector trong dev tool là chuẩn nhất, có thể add thêm vài cấp
+Các class của BS hay đi kèm !important trong css - đoán ngược trong html class 
+*/
+@media screen and (max-width: 1199.98px) {
+  /* Carousend font-size nên tử tính nhẩm chọn vw sao cho gần ~52px, số lẻ ok */
+  #carouselCyber .carousel-caption {
+    top: 50%;
+  }
+
+  #carouselCyber .carousel-caption h1 {
+    font-size: 4vw;
+  }
+
+  #carouselCyber .carousel-caption p {
+    font-size: 1.6vw;
+    margin-bottom: 0.5em;
+  }
+  /* Kích thước chữ button nên resp theo chữ trong vùng đó */
+  #carouselCyber .carousel-caption button {
+    font-size: 1.5vw;
+    padding: 0.8em 1em;
+  }
+}
+
 @media screen and (max-width: 991.98px) {
   .navInstruction .navbar-brand p:first-child {
     font-size: 3vw;
