@@ -668,8 +668,9 @@ footer {
   color: white;
 }
 
-/* NOTE responsive =====*/
-
+/* NOTE responsive */
+/* ============================================ */
+/* ============================================ */
 /* 
 Việc test responsive bằng dev tool chỉ chính xác 1 phần
 Chuẩn nhất vẫn là dùng đúng thiết bị để test vì có thể các chức năng touch, finger sẽ sai hoặc js chạy sai
@@ -735,6 +736,7 @@ nên inspet lên lấy bộ selector để override
 Các class của BS hay đi kèm !important trong css - đoán ngược trong html class 
 */
 @media screen and (max-width: 1199.98px) {
+  /* CAROUSEL */
   /* Carousend font-size nên tử tính nhẩm chọn vw sao cho gần ~52px, số lẻ ok */
   #carouselCyber .carousel-caption {
     top: 50%;
@@ -757,6 +759,7 @@ Các class của BS hay đi kèm !important trong css - đoán ngược trong ht
 }
 
 @media screen and (max-width: 991.98px) {
+  /* HEADER */
   .navInstruction .navbar-brand p:first-child {
     font-size: 3vw;
   }
@@ -776,6 +779,7 @@ Các class của BS hay đi kèm !important trong css - đoán ngược trong ht
 Tuy nhiên số gợi ý trong devtool có thể sai lệch, offset nhỏ
 - BS ko có nên dùng đúng số */
 @media screen and (max-width: 415px) {
+  /* CAROUSEL */
   #carouselCyber {
     height: 250px;
   }
@@ -792,6 +796,7 @@ Tuy nhiên số gợi ý trong devtool có thể sai lệch, offset nhỏ
 }
 
 @media screen and (max-width: 767.98px) {
+  /* HEADER */
   #navbarInstruction .navbar-nav {
     background-color: #eee;
     text-align: center;
@@ -809,6 +814,14 @@ Tuy nhiên số gợi ý trong devtool có thể sai lệch, offset nhỏ
     color: black;
   }
 }
+
+@media screen and (max-width: 376px) {
+  /* FEEDBACK */
+  .feedback__bottom {
+    width: 100%;
+  }
+}
+
 /* 
 iPhone 4/5 có thể tính là trường hợp đặc biệt
 Đối với apple watch thì chuyển sang app tool chứ ít khi quan tâm
@@ -817,6 +830,7 @@ Max win màn lớn trước nhỏ sau
 */
 
 @media screen and (max-width: 320px) {
+  /* HEADER */
   .header__right {
     width: 35%;
     text-align: center;
@@ -830,6 +844,7 @@ Max win màn lớn trước nhỏ sau
 /* NOTE res_navbar */
 /* Nếu chặn 2 đầu trong điều kiện thì để trên dưới gì cũng ok, do chặn 2 đầu nên set bằng được */
 @media screen and (min-width: 768px) and (max-width: 992px) {
+  /* HEADER */
   #navbarInstruction .nav-item {
     margin: 0;
     padding: 0 2px;
@@ -838,5 +853,13 @@ Max win màn lớn trước nhỏ sau
   #navbarInstruction .nav-link {
     font-size: 12px;
     padding: 5px;
+  }
+}
+
+/* Vẫn phải né 576px vì có lỗi hình nhỏ tại kích thước đó */
+@media screen and (min-width: 575px) and (max-width: 992px) {
+  /* FEEDBACK */
+  .feedback__bottom {
+    width: 85%;
   }
 }
