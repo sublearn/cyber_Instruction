@@ -232,6 +232,10 @@ Line height các vùng respon nên để theo font-size - em chứ ko set cứng
   background-color: #ff4f81;
 }
 
+/* Con số z-index 11 là do inspect code phát hiện caption của carousel được BS cho giá trị là 10, 
+set 11 vừa đủ để đè lên, 
+ko set lớn quá vì dễ mất kiểm soát */
+
 #carouselCyber .carousel-control-next,
 .carousel-control-next,
 #carouselCyber .carousel-control-next,
