@@ -172,6 +172,21 @@ có thể check qua dev tools css cũ
   color: #ff4f81;
 }
 
+/* fix button bo tròn 
+Inspect - sự kiện click vào là focus
+*/
+.navInstruction .navbar-toggler {
+  color: #ff4f81;
+  background-color: black;
+
+  border-radius: 0;
+}
+
+.navInstruction .navbar-toggler:focus {
+  /* outline: none; */
+  box-shadow: none;
+}
+
 /* NOTE CAROUSEL */
 /* Kỹ thuật riêng canh center chỉ dùng khi với pos absolute 
 fix nhẹ top lên 55% cho giống layout mẫu
@@ -682,12 +697,50 @@ https://getbootstrap.com/docs/4.6/layout/grid/
 /* NOTE res_Header */
 /* TODO check vấn đề form phần footer màn nhỏ bị đẩy ra khỏi container, lỗi responsive */
 
+/* Dời vị trí màn lớn trước, nhỏ sau */
+/* vh, vw unit
+resp cho img, txt, logo theo khung trình duyệt ( cấp root (html) )
+canh phần tử khi biết chiều cao
+% phụ thuộc vào CẤP - cha gần nhất
+
+*/
+
+/* https://getbootstrap.com/docs/5.1/layout/breakpoints/#max-width 
+nên inspet lên lấy bộ selector để override
+*/
+@media screen and (max-width: 991.98px) {
+  .navInstruction .navbar-brand p:first-child {
+    font-size: 3vw;
+  }
+  .navInstruction .navbar-brand p:last-child {
+    font-size: 1.5vw;
+  }
+}
+
 @media screen and (max-width: 575.98px) {
   .header__left a {
     display: block;
   }
 }
 
+@media screen and (max-width: 767.98px) {
+  #navbarInstruction .navbar-nav {
+    background-color: #eee;
+    text-align: center;
+  }
+
+  #navbarInstruction .dropdown-menu {
+    background-color: #e0e1e2;
+    border-color: #e0e1e2;
+    text-align: center;
+    /* Color ở đâu ko đủ đè độ ưu tiên ở trên */
+    /* color: black; */
+  }
+
+  #navbarInstruction .dropdown-item {
+    color: black;
+  }
+}
 /* 
 iPhone 4/5 có thể tính là trường hợp đặc biệt
 Đối với apple watch thì chuyển sang app tool chứ ít khi quan tâm
@@ -716,24 +769,5 @@ Max win màn lớn trước nhỏ sau
   #navbarInstruction .nav-link {
     font-size: 12px;
     padding: 5px;
-  }
-}
-
-/* vh, vw unit
-resp cho img, txt, logo theo khung trình duyệt ( cấp root (html) )
-canh phần tử khi biết chiều cao
-% phụ thuộc vào CẤP - cha gần nhất
-
-*/
-
-/* https://getbootstrap.com/docs/5.1/layout/breakpoints/#max-width 
-nên inspet lên lấy bộ selector để override
-*/
-@media screen and (max-width: 991.98px) {
-  .navInstruction .navbar-brand p:first-child {
-    font-size: 3vw;
-  }
-  .navInstruction .navbar-brand p:last-child {
-    font-size: 1.5vw;
   }
 }
