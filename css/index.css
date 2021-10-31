@@ -701,7 +701,39 @@ Max win màn lớn trước nhỏ sau
     text-align: center;
   }
 
-  .header__right a{
+  .header__right a {
     margin-top: 5px;
+  }
+}
+
+/* NOTE res_navbar */
+/* Nếu chặn 2 đầu trong điều kiện thì để trên dưới gì cũng ok, do chặn 2 đầu nên set bằng được */
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  #navbarInstruction .nav-item {
+    margin: 0;
+    padding: 0 2px;
+  }
+  #navbarInstruction .nav-link {
+    font-size: 12px;
+    padding: 5px;
+  }
+}
+
+/* vh, vw unit
+resp cho img, txt, logo theo khung trình duyệt ( cấp root (html) )
+canh phần tử khi biết chiều cao
+% phụ thuộc vào CẤP - cha gần nhất
+
+*/
+
+/* https://getbootstrap.com/docs/5.1/layout/breakpoints/#max-width 
+nên inspet lên lấy bộ selector để override
+*/
+@media screen and (max-width: 991.98px) {
+  .navInstruction .navbar-brand p:first-child {
+    font-size: 3vw;
+  }
+  .navInstruction .navbar-brand p:last-child {
+    font-size: 1.5vw;
   }
 }
